@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    internal interface IOrderRequestFailedEvent
+    public interface IOrderRequestFailedEvent
     {
+        public int OrderId { get; set; }
+        public string Reason { get; set; }
     }
 }
