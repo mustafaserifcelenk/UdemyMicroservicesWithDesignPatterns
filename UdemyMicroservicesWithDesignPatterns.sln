@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "Order.API\Order.API.csproj", "{F54FBB55-1998-403A-BB07-BAD8EE497E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "Order.API\Order.API.csproj", "{F54FBB55-1998-403A-BB07-BAD8EE497E3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "Stock.API\Stock.API.csproj", "{B2A9ABA3-82E4-420C-8792-F8553B5B5B98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "Stock.API\Stock.API.csproj", "{B2A9ABA3-82E4-420C-8792-F8553B5B5B98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "Payment.API\Payment.API.csproj", "{3D21E507-6D73-4058-8A74-A8BC67968182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.API", "Payment.API\Payment.API.csproj", "{3D21E507-6D73-4058-8A74-A8BC67968182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{365E0658-1063-4AAD-8E24-59A0CABDD3D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{365E0658-1063-4AAD-8E24-59A0CABDD3D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaStateMachineWorkerService", "SagaStateMachineWorkerService\SagaStateMachineWorkerService.csproj", "{4E66077B-75BE-4D9A-A6D7-44BE1348B8EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{365E0658-1063-4AAD-8E24-59A0CABDD3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365E0658-1063-4AAD-8E24-59A0CABDD3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365E0658-1063-4AAD-8E24-59A0CABDD3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E66077B-75BE-4D9A-A6D7-44BE1348B8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E66077B-75BE-4D9A-A6D7-44BE1348B8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E66077B-75BE-4D9A-A6D7-44BE1348B8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E66077B-75BE-4D9A-A6D7-44BE1348B8EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
