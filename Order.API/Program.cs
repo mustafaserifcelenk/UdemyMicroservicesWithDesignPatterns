@@ -1,6 +1,7 @@
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Order.API.Consumers;
 using Order.API.Models;
 using Shared;
 
@@ -9,9 +10,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<OrderRequestCompletedEventConsumer>();
+    //x.AddConsumer<OrderRequestFailedEventConsumer>();
+
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(builder.Configuration.GetConnectionString("RabbitMQ"));
+
+        cfg.ReceiveEndpoint(RabbitMQSettingsConst.OrderRequestCompletedEventtQueueName, x =>
+        {
+            x.ConfigureConsumer<OrderRequestCompletedEventConsumer>(context);
+        });
+
+        //cfg.ReceiveEndpoint(RabbitMQSettingsConst.OrderRequestFailedEventtQueueName, x =>
+        //{
+        //    x.ConfigureConsumer<OrderRequestFailedEventConsumer>(context);
+        //});
     });
 });
 
